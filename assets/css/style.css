@@ -5,8 +5,8 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: blueviolet;
-  color: white;
+  background: radial-gradient(#170202, #1e1b08);
+  color: #832121;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,6 +74,7 @@ body .game-container .word {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 10px;
   position: absolute;
   bottom: 10px;
   left: 50%;
@@ -82,7 +83,7 @@ body .game-container .word {
 }
 
 body .letter {
-  border-bottom: 3px solid #2980b9;
+  border-bottom: 3px solid #fff;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -114,7 +115,7 @@ body .popup-container {
 }
 
 body .popup-container .popup {
-  background-color: #2980b9;
+  background-color: #832121;
   border-radius: 5px;
   -webkit-box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
@@ -125,7 +126,7 @@ body .popup-container .popup {
 body .popup-container .popup button {
   cursor: pointer;
   background-color: #fff;
-  color: #2980b9;
+  color: #832121;
   border: 0;
   margin-top: 20px;
   padding: 12px 20px;
@@ -158,7 +159,7 @@ body .notification-container p {
 }
 
 body .notification-container .show {
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-50px);
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 /*# sourceMappingURL=style.css.map */

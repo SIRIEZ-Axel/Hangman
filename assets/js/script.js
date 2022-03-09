@@ -7,7 +7,21 @@ const finalMessage = document.getElementById('final-message');
 
 const figureParts= document.querySelectorAll(".figure-part");
 
-const words = ['application', 'programming', 'interface', 'wizard'];
+const words = ["python",
+"javascript",
+"mongodb",
+"json",
+"java",
+"html",
+"css",
+"c",
+"csharp",
+"golang",
+"kotlin",
+"php",
+"sql",
+"ruby"
+];
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
@@ -32,8 +46,9 @@ function displayWord(){
     const innerWord = wordE1.innerText.replace(/\n/g, '');
 
     if(innerWord === selectedWord){
-        finalMessage.innerText = 'Congratulations! You won!';
+        finalMessage.innerText = 'Congratulation! You won!';
         popup.style.display= 'flex';
+        popup.style.color = 'black'
     }
 }
 
@@ -59,8 +74,9 @@ function updateWrongLetterE1(){
 
     //Check if lost
     if(wrongLetters.length === figureParts.length){
-        finalMessage.innerText = 'Unfortunately you lost. 😕';
+        finalMessage.innerText = 'Game Over';
         popup.style.display = 'flex';
+        popup.style.color = 'black'
     }
 }
 
