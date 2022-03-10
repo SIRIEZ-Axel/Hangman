@@ -9,22 +9,23 @@
     <title>The Hangman</title>
 </head>
 <body>
-    <h1>
-        The Hangman challenge
-    </h1>
-    <p>
-        Guess the programming language
-    </p>
+    <header>
+        <h1>
+            The Hangman challenge
+        </h1>
+        <p>
+            Guess the programming language
+        </p>
+    </header>
 
     <div class="game-container">
         <svg height="250" width="200" class="figure-container">
             <!--rod -->
-            <line x1="60" y1="20" x2="140" y2="20"/>
-            <line x1="140" y1="20" x2="140" y2="50"/>
-            <line x1="60" y1="20" x2="60" y2="230"/>
-            <line x1="20" y1="230" x2="100" y2="230"/>
-            <line x1="95" y1="21" x2="60" y2="50"/>
-
+            <line x1="60" y1="20" x2="140" y2="20"></line>
+            <line x1="140" y1="20" x2="140" y2="50"></line>
+            <line x1="60" y1="20" x2="60" y2="230"></line>
+            <line x1="20" y1="230" x2="100" y2="230"></line>
+            <line x1="90" y1="20" x2="60" y2="50"></line>
             <!-- head-->
             <circle cx="140" cy="70" r="20" class="figure-part"/>
             
@@ -46,7 +47,7 @@
         <div class="word" id="word"></div>
     </div>
 
-    <!--Container for final message -->
+    <!--Container for final message & reset -->
     <div class="popup-container" id="popup-container">
         <div class="popup">
             <h2 id="final-message"></h2>

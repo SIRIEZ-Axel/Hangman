@@ -1,7 +1,5 @@
 # Hangman challenge
 
-### Here is my project of an hangman
+### Here is my project of a hangman in html, css & Javascript (vanilla)
 
-**The difficulty of this challenge is to use some "backend" in javascript**
-
-***SIRIEZ AXEL***
+*SIRIEZ AXEL*

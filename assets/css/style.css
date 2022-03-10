@@ -5,8 +5,8 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: radial-gradient(#170202, #1e1b08);
-  color: #832121;
+  background: blueviolet;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,8 +25,25 @@ body {
   overflow: hidden;
 }
 
-body h1 {
-  margin: 20px 0 0;
+body header {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 25%;
+}
+
+body header h1 {
+  margin: 25px 0 0;
+  padding-bottom: 20px;
 }
 
 body .game-container {
@@ -115,7 +132,7 @@ body .popup-container {
 }
 
 body .popup-container .popup {
-  background-color: #832121;
+  background-color: #2e82b9;
   border-radius: 5px;
   -webkit-box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
@@ -126,8 +143,9 @@ body .popup-container .popup {
 body .popup-container .popup button {
   cursor: pointer;
   background-color: #fff;
-  color: #832121;
+  color: black;
   border: 0;
+  border-radius: 5px;
   margin-top: 20px;
   padding: 12px 20px;
   font-size: 16px;

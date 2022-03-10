@@ -1,11 +1,13 @@
+$darktrans: rgba(0, 0, 0, 0.3);
+
 * {
     box-sizing: border-box;
 }
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background: radial-gradient(rgb(23, 2, 2), rgb(30, 27, 8));
-    color: rgb(131, 33, 33);
+    background: blueviolet;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,8 +15,18 @@ body{
     height: 80vh;
     margin: 0;
     overflow: hidden;
-    h1 {
-        margin: 20px 0 0;
+    header{
+
+        background-color: $darktrans;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 25%;
+        h1 {
+            margin: 25px 0 0;
+            padding-bottom: 20px;
+        }
     }
 
     .game-container{
@@ -68,7 +80,7 @@ body{
     }
 
     .popup-container{
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: $darktrans;
         position: fixed;
         top: 0;
         left: 0;
@@ -77,7 +89,7 @@ body{
         align-items: center;
         justify-content: center;
         .popup{
-            background-color: rgb(131, 33, 33);
+            background-color: rgb(46, 130, 185);
             border-radius: 5px;
             box-shadow: 0 15px 10px 3px rgba(0 , 0, 0, 0.1);
             padding: 20px;
@@ -85,8 +97,9 @@ body{
             button{
                 cursor: pointer;
                 background-color: #fff;
-                color: rgb(131, 33, 33);
+                color: rgb(0, 0, 0);
                 border: 0;
+                border-radius: 5px;
                 margin-top: 20px;
                 padding: 12px 20px;
                 font-size: 16px;
@@ -100,7 +113,7 @@ body{
         }
     }
     .notification-container{
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: $darktrans;
         border-radius: 10px 10px 0 0;
         padding: 15px 20px;
         position: absolute;
