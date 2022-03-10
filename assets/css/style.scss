@@ -10,7 +10,6 @@ $whitetrans: rgba(255, 255, 255, 0.5);
 $red: rgba(153, 0, 0, 1);
 $whitecolor: #fff;
 
-
 * {
     box-sizing: border-box;
 }
@@ -50,6 +49,7 @@ body{
         color: black;
     }
     .player{
+
         margin-top: 40px;
         margin-bottom: -60px;
         .audio-player{
@@ -165,5 +165,21 @@ body{
         &.show{
             bottom: 0%;
         }
+    }
+}
+
+@media only screen and(min-width: 374px) and (max-width:767px){
+    body{
+        height: 800px;
+        header{
+            img{
+                display: none;
+            }
+        }
+        .game-container{
+            display: flex;
+            flex-direction: column;
+        }
+        
     }
 }

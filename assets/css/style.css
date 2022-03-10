@@ -222,4 +222,22 @@ body .notification-container p {
 body .notification-container.show {
   bottom: 0%;
 }
+
+@media only screen and (min-width: 374px) and (max-width: 767px) {
+  body {
+    height: 800px;
+  }
+  body header img {
+    display: none;
+  }
+  body .game-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 /*# sourceMappingURL=style.css.map */
