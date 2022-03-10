@@ -10,13 +10,21 @@
 </head>
 <body>
     <header>
+        <img src="./assets/img/icon.png" alt="hangman-icon" id="hangman-icon">
         <h1>
             The Hangman challenge
         </h1>
-        <p>
-            Guess the programming language
-        </p>
+        
     </header>
+    <p>
+        Guess the programming language
+    </p>
+    
+    <div class="player">
+        <audio controls="metadata" class="audio-player" >
+            <source src="./assets/audio/audio.mp3">
+        </audio>
+    </div>
 
     <div class="game-container">
         <svg height="250" width="200" class="figure-container">
@@ -41,9 +49,11 @@
             <line x1="140" y1="150" x2="160" y2="180"class="figure-part"/>
         </svg>
         
+        
         <div class="wrong-letter-container">
             <div id="wrong-letters"></div>
         </div>
+
         <div class="word" id="word"></div>
     </div>
 

@@ -1,33 +1,62 @@
-$darktrans: rgba(0, 0, 0, 0.3);
+@font-face {
+    font-family: "Stranger";
+    src: url(../font/StrangerCreature-MVpBr.ttf) format("truetype");
+}
+
+
+// variables
+$darktrans: rgba(0, 0, 0, 0.5);
+$whitetrans: rgba(255, 255, 255, 0.5);
+$red: rgba(153, 0, 0, 1);
+$whitecolor: #fff;
+
 
 * {
     box-sizing: border-box;
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background: blueviolet;
-    color: white;
+    font-family: "Stranger", sans-serif;
+    letter-spacing: 10px;
+    background: linear-gradient(-180deg, rgb(175, 0, 0), rgb(0, 0, 0));
+    background-repeat: repeat;
+    background-size: cover;
+    color: $whitecolor;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 100vh;
     margin: 0;
     overflow: hidden;
     header{
-
-        background-color: $darktrans;
         width: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 25%;
+        align-items: baseline;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+        img{
+            height: 35px;
+        }
         h1 {
-            margin: 25px 0 0;
-            padding-bottom: 20px;
+            margin: 15px 0 0;
+            color: black;
+            font-family: "Stranger", sans-serif;
+            font-size: 45px;
         }
     }
+    p{
+        color: black;
+    }
+    .player{
+        margin-top: 40px;
+        margin-bottom: -60px;
+        .audio-player{
+            outline: none;
+        }
+    }
+
 
     .game-container{
         padding: 20px 30px;
@@ -37,7 +66,7 @@ body{
         width: 450px;
         .figure-container{
             fill: transparent;
-            stroke: #fff {
+            stroke: $whitecolor {
                 width: 4px;
                 linecap:round;
             }
@@ -54,6 +83,7 @@ body{
             text-align: right;
             p{
                 margin: 0 0 5px;
+                color: $whitecolor;
             }
             span{
                 font-size: 24px;
@@ -67,9 +97,17 @@ body{
             left: 50%;
             transform: translateX(-50%);
         }
+        .lives-container{
+            margin-top: 10px;
+            .mylives{
+                display: flex;
+                justify-content: center;
+
+            }
+        }
     }
     .letter{
-        border-bottom: 3px solid #fff;
+        border-bottom: 3px solid $whitecolor;
         display: inline-flex;
         font-size: 30px;
         align-items: center;
@@ -82,6 +120,8 @@ body{
     .popup-container{
         background-color: $darktrans;
         position: fixed;
+        width: 100%;
+        height: 100%;
         top: 0;
         left: 0;
         right: 0;
@@ -89,15 +129,15 @@ body{
         align-items: center;
         justify-content: center;
         .popup{
-            background-color: rgb(46, 130, 185);
+            background-color: $red;
             border-radius: 5px;
             box-shadow: 0 15px 10px 3px rgba(0 , 0, 0, 0.1);
             padding: 20px;
             text-align: center;
             button{
                 cursor: pointer;
-                background-color: #fff;
-                color: rgb(0, 0, 0);
+                background-color: $whitecolor;
+                color: #990000;
                 border: 0;
                 border-radius: 5px;
                 margin-top: 20px;
@@ -113,17 +153,17 @@ body{
         }
     }
     .notification-container{
-        background-color: $darktrans;
+        background-color: $whitetrans;
         border-radius: 10px 10px 0 0;
         padding: 15px 20px;
         position: absolute;
-        bottom: -50px;
+        bottom: -60px;
         transition: transform 0.3s ease-in-out;
         p{
             margin: 0;
         }
-        .show{
-            transform: translateY(0px);
+        &.show{
+            bottom: 0%;
         }
     }
 }
