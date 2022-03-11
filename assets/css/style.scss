@@ -10,24 +10,52 @@ $whitetrans: rgba(255, 255, 255, 0.5);
 $red: rgba(153, 0, 0, 1);
 $whitecolor: #fff;
 
+
+
 * {
     box-sizing: border-box;
 }
 
 body{
     font-family: "Stranger", sans-serif;
-    letter-spacing: 10px;
-    background: linear-gradient(-180deg, rgb(175, 0, 0), rgb(0, 0, 0));
-    background-repeat: repeat;
-    background-size: cover;
+    letter-spacing: 10px;    
     color: $whitecolor;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
     height: 100vh;
     margin: 0;
     overflow: hidden;
+
+    background: linear-gradient(-180deg, rgb(175, 0, 0), rgb(0, 0, 0));
+    background: {
+        repeat: no-repeat;
+        size: cover;
+    }
+    .crows{
+        position: fixed;
+        left: 0;
+        opacity: 0.5;
+        height: 100%;
+    }
+
+    p{
+        color: black;
+    }
+
+    .player{
+        margin-top: 40px;
+        margin-bottom: -60px;
+        text-align: center;
+        .audio-player{
+            opacity: 0.7;
+            outline: none;
+        }
+    }
+
     header{
         width: 100%;
         display: flex;
@@ -45,18 +73,6 @@ body{
             font-size: 45px;
         }
     }
-    p{
-        color: black;
-    }
-    .player{
-
-        margin-top: 40px;
-        margin-bottom: -60px;
-        .audio-player{
-            outline: none;
-        }
-    }
-
 
     .game-container{
         padding: 20px 30px;
@@ -106,6 +122,7 @@ body{
             }
         }
     }
+
     .letter{
         border-bottom: 3px solid $whitecolor;
         display: inline-flex;
@@ -152,6 +169,7 @@ body{
             }
         }
     }
+
     .notification-container{
         background-color: $whitetrans;
         border-radius: 10px 10px 0 0;
@@ -165,21 +183,5 @@ body{
         &.show{
             bottom: 0%;
         }
-    }
-}
-
-@media only screen and(min-width: 374px) and (max-width:767px){
-    body{
-        height: 800px;
-        header{
-            img{
-                display: none;
-            }
-        }
-        .game-container{
-            display: flex;
-            flex-direction: column;
-        }
-        
     }
 }
