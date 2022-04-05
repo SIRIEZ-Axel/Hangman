@@ -16,18 +16,42 @@ $whitecolor: #fff;
 
 body{
     font-family: "Stranger", sans-serif;
-    letter-spacing: 10px;
-    background: linear-gradient(-180deg, rgb(175, 0, 0), rgb(0, 0, 0));
-    background-repeat: repeat;
-    background-size: cover;
+    letter-spacing: 10px;    
     color: $whitecolor;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
     height: 100vh;
     margin: 0;
     overflow: hidden;
+
+    background: linear-gradient(-180deg, rgb(175, 0, 0), rgb(0, 0, 0));
+    background: {
+        repeat: no-repeat;
+        size: cover;
+    }
+    .crows{
+        position: fixed;
+        left: 0;
+        opacity: 0.5;
+        height: 100%;
+    }
+
+    p{
+        color: black;
+    }
+
+    .rules{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 35px;
+        margin-bottom: -75px;
+    }
+
     header{
         width: 100%;
         display: flex;
@@ -36,7 +60,7 @@ body{
         gap: 20px;
         margin-bottom: 20px;
         img{
-            height: 35px;
+            height: 40px;
         }
         h1 {
             margin: 15px 0 0;
@@ -45,18 +69,6 @@ body{
             font-size: 45px;
         }
     }
-    p{
-        color: black;
-    }
-    .player{
-
-        margin-top: 40px;
-        margin-bottom: -60px;
-        .audio-player{
-            outline: none;
-        }
-    }
-
 
     .game-container{
         padding: 20px 30px;
@@ -106,6 +118,7 @@ body{
             }
         }
     }
+
     .letter{
         border-bottom: 3px solid $whitecolor;
         display: inline-flex;
@@ -130,6 +143,7 @@ body{
         justify-content: center;
         .popup{
             background-color: $red;
+            border: 2px solid rgba(0, 0, 0, 0.8);
             border-radius: 5px;
             box-shadow: 0 15px 10px 3px rgba(0 , 0, 0, 0.1);
             padding: 20px;
@@ -138,7 +152,7 @@ body{
                 cursor: pointer;
                 background-color: $whitecolor;
                 color: #990000;
-                border: 0;
+                border: 2px solid rgba(0, 0, 0, 0.8);
                 border-radius: 5px;
                 margin-top: 20px;
                 padding: 12px 20px;
@@ -152,6 +166,7 @@ body{
             }
         }
     }
+
     .notification-container{
         background-color: $whitetrans;
         border-radius: 10px 10px 0 0;
@@ -165,21 +180,5 @@ body{
         &.show{
             bottom: 0%;
         }
-    }
-}
-
-@media only screen and(min-width: 374px) and (max-width:767px){
-    body{
-        height: 800px;
-        header{
-            img{
-                display: none;
-            }
-        }
-        .game-container{
-            display: flex;
-            flex-direction: column;
-        }
-        
     }
 }

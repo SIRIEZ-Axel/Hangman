@@ -11,21 +11,24 @@
 <body>
     <header>
         <img src="./assets/img/icon.png" alt="hangman-icon" id="hangman-icon">
+        
         <h1>
             The Hangman challenge
         </h1>
         
     </header>
-    <p>
-        Guess the programming language
-    </p>
     
-    <div class="player">
-        <audio controls="metadata" class="audio-player" >
-            <source src="./assets/audio/audio.mp3">
-        </audio>
+    <img src="./assets/img/crows.svg" alt="crows" class="crows">
+    
+    <div class="rules">
+        <p>
+            Guess the programming language -
+        </p>
+        <p>
+            Enter a letter
+        </p>
     </div>
-
+    
     <div class="game-container">
         <svg height="250" width="200" class="figure-container">
             <!--rod -->
@@ -38,17 +41,16 @@
             <circle cx="140" cy="70" r="20" class="figure-part"/>
             
             <!--body-->
-            <line x1="140" y1="90" x2="140" y2="150"class="figure-part"/>
+            <line x1="140" y1="90" x2="140" y2="150" class="figure-part"/>
 
             <!--arms-->
-            <line x1="140" y1="120" x2="120" y2="100"class="figure-part"/>
-            <line x1="140" y1="120" x2="160" y2="100"class="figure-part"/>
+            <line x1="140" y1="120" x2="120" y2="100" class="figure-part"/>
+            <line x1="140" y1="120" x2="160" y2="100" class="figure-part"/>
 
             <!--legs-->
-            <line x1="140" y1="150" x2="120" y2="180"class="figure-part"/>
-            <line x1="140" y1="150" x2="160" y2="180"class="figure-part"/>
+            <line x1="140" y1="150" x2="120" y2="180" class="figure-part"/>
+            <line x1="140" y1="150" x2="160" y2="180" class="figure-part"/>
         </svg>
-        
         
         <div class="wrong-letter-container">
             <div id="wrong-letters"></div>
